@@ -3,7 +3,7 @@ import Feed from "@/components/Home/Feed/Feed";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <CreatePostSection />
       <Feed />
     </div>

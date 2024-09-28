@@ -4,7 +4,7 @@ import { FaThumbsDown, FaThumbsUp } from "react-icons/fa6";
 
 const FeedCard = ({ post }: { post: IPetTipStory }) => {
   return (
-    <div className="flex flex-col gap-2 border border-gray-400 max-w-xl mx-auto p-2 rounded-md shadow-lg">
+    <div className="flex flex-col gap-2 hover:scale-[1.01] duration-300 border hover:border-gray-400 max-w-xl mx-auto p-2 rounded-md shadow-lg">
       <div className="flex items-center gap-1">
         <img
           className="w-10 h-10 rounded-full object-cover"
@@ -15,6 +15,15 @@ const FeedCard = ({ post }: { post: IPetTipStory }) => {
           <div className="text-sm font-semibold">{post.publisher_name}</div>
           <div className="text-xs text-gray-500">{post.publish_date}</div>
         </div>
+      </div>
+      <div>
+        <span
+          className={`${post.category === "tip" && "bg-amber-200"} ${
+            post.category === "story" && "bg-emerald-200"
+          } underline`}
+        >
+          #{post.category}
+        </span>
       </div>
 
       <div className="space-y-2">

@@ -11,6 +11,7 @@ export interface IComment {
     title: string;
     story: string;
     publish_date: string;
+    category: string;
     image: string;
     publisher_name: string;
     publisher_email: string;

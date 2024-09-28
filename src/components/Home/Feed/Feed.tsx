@@ -1,6 +1,7 @@
 import FeedCard from "@/components/UI/FeedUi/FeedCard";
+import FeedFiltering from "./FeedFiltering";
 
-const fakeDate = [
+const fakeData = [
   {
     _id: "1",
     title: "5 Tips for a Happy Dog",
@@ -13,18 +14,19 @@ const fakeDate = [
     publisher_img: "https://example.com/images/jane-doe.jpg",
     upVote: 120,
     downVote: 5,
+    category: "tip",
     comments: [
       {
         _id: "c1",
         name: "Mark Smith",
-        img: "https://i.ibb.co.com/424JzNn/person10.png",
+        img: "https://i.ibb.co/424JzNn/person10.png",
         text: "Great tips! My dog loves the extra walks.",
         date: "2023-09-21",
       },
       {
         _id: "c2",
         name: "Lisa Ray",
-        img: "https://i.ibb.co.com/424JzNn/person10.png",
+        img: "https://i.ibb.co/424JzNn/person10.png",
         text: "Thanks for sharing! I'll try these out.",
         date: "2023-09-22",
       },
@@ -42,11 +44,12 @@ const fakeDate = [
     publisher_img: "https://example.com/images/tom-johnson.jpg",
     upVote: 85,
     downVote: 2,
+    category: "story",
     comments: [
       {
         _id: "c3",
         name: "Emma Brown",
-        img: "https://i.ibb.co.com/424JzNn/person10.png",
+        img: "https://i.ibb.co/424JzNn/person10.png",
         text: "Very informative! I never knew that twitching tail meant anger.",
         date: "2023-09-19",
       },
@@ -64,6 +67,7 @@ const fakeDate = [
     publisher_img: "https://example.com/images/samantha-green.jpg",
     upVote: 60,
     downVote: 0,
+    category: "tip",
     comments: [],
   },
   {
@@ -78,18 +82,19 @@ const fakeDate = [
     publisher_img: "https://example.com/images/robert-white.jpg",
     upVote: 95,
     downVote: 3,
+    category: "tip",
     comments: [
       {
         _id: "c4",
         name: "Laura Wilson",
-        img: "https://i.ibb.co.com/424JzNn/person10.png",
+        img: "https://i.ibb.co/424JzNn/person10.png",
         text: "Love this! My dog has a special corner now.",
         date: "2023-09-11",
       },
       {
         _id: "c5",
         name: "James Lee",
-        img: "https://i.ibb.co.com/424JzNn/person10.png",
+        img: "https://i.ibb.co/424JzNn/person10.png",
         text: "Great suggestions! I will implement these soon.",
         date: "2023-09-12",
       },
@@ -99,11 +104,16 @@ const fakeDate = [
 
 const Feed = () => {
   return (
-    <div className="mx-5 space-y-5">
-      {fakeDate.map((post ) => (
-        <FeedCard key={post._id} post={post} />
-      ))}
-    </div>
+    <>
+      <div className="sticky top-0 py-2 z-[49] bg-white">
+        <FeedFiltering/>
+      </div>
+      <div className="my-5 space-y-5">
+        {fakeData.map((post) => (
+          <FeedCard key={post._id} post={post} />
+        ))}
+      </div>
+    </>
   );
 };
 export default Feed;
