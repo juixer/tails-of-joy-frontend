@@ -12,6 +12,9 @@ const FeedFiltering = () => {
         <span className="p-2 bg-gray-300 rounded-md font-bold hover:bg-gray-400 cursor-pointer duration-300">
           Story
         </span>
+        <span className="p-2 bg-gray-300 rounded-md font-bold hover:bg-gray-400 cursor-pointer duration-300">
+          Following
+        </span>
       </div>
 
       <div className="flex gap-3">
