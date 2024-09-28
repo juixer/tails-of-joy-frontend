@@ -68,18 +68,18 @@ const ViewPostPage = ({ params }: { params: string }) => {
         <div className="space-y-2">
           {post.comments.map((comment) => (
             <div
-              key={comment._id}
+              key={comment?._id}
               className="flex flex-col gap-1 border rounded-md border-gray-300 p-1"
             >
               <div className="flex items-center gap-1">
                 <img
                   className="w-10 h-10 rounded-full object-cover"
                   src={"https://i.ibb.co.com/Xjjd68g/default-user.jpg"}
-                  alt={comment.name}
+                  alt={comment?.name}
                 />
                 <div>
-                  <div className="text-sm font-semibold">{comment.name}</div>
-                  <div className="text-xs text-gray-500">{comment.date}</div>
+                  <div className="text-sm font-semibold">{comment?.name}</div>
+                  <div className="text-xs text-gray-500">{comment?.date}</div>
                 </div>
               </div>
               <div>
@@ -88,6 +88,17 @@ const ViewPostPage = ({ params }: { params: string }) => {
             </div>
           ))}
         </div>
+        <form className="my-2">
+          <textarea
+            className="textarea textarea-bordered w-full"
+            placeholder="Enter your Comment"
+          ></textarea>
+          <div className="flex justify-end">
+            <button className="btn btn-sm bg-blue-500 hover:bg-sky-600 text-white">
+              Comment
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
