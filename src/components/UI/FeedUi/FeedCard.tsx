@@ -5,15 +5,23 @@ import { FaThumbsDown, FaThumbsUp } from "react-icons/fa6";
 const FeedCard = ({ post }: { post: IPetTipStory }) => {
   return (
     <div className="flex flex-col gap-2 hover:scale-[1.01] duration-300 border hover:border-gray-400 max-w-xl mx-auto p-2 rounded-md shadow-lg">
-      <div className="flex items-center gap-1">
-        <img
-          className="w-10 h-10 rounded-full object-cover"
-          src={"https://i.ibb.co.com/Xjjd68g/default-user.jpg"}
-          alt={post.publisher_name}
-        />
-        <div className="">
-          <div className="text-sm font-semibold">{post.publisher_name}</div>
-          <div className="text-xs text-gray-500">{post.publish_date}</div>
+      <div className="flex justify-between">
+        <div className="flex items-center gap-1">
+          <img
+            className="w-10 h-10 rounded-full object-cover"
+            src={"https://i.ibb.co.com/Xjjd68g/default-user.jpg"}
+            alt={post.publisher_name}
+          />
+          <div className="">
+            <div className="text-sm font-semibold">{post.publisher_name}</div>
+            <div className="text-xs text-gray-500">{post.publish_date}</div>
+          </div>
+        </div>
+        <div>
+          {/* <button className="bg-sky-500 hover:bg-sky-600 text-white p-1 rounded-md">Follow</button> */}
+          <button className="bg-red-500 hover:bg-red-900 text-white p-1 rounded-md">
+            Unfollow
+          </button>
         </div>
       </div>
       <div>

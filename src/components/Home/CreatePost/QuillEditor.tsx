@@ -19,7 +19,7 @@ const QuillEditor = () => {
     <>
       <ReactQuill
         style={{
-          height: "150px",
+          height: "180px",
           borderRadius: "50px",
         }}
         placeholder="Start writing your thought"
@@ -28,7 +28,7 @@ const QuillEditor = () => {
         value={value}
         onChange={setValue}
       />
-      <div className="flex justify-end mt-16 mb-5">
+      <div className="flex justify-end mr-1 mb-5">
         <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
           Publish
         </button>

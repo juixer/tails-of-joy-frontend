@@ -2,7 +2,7 @@
 const FeedFiltering = () => {
   return (
     <div className="max-w-xl mx-auto space-y-5">
-      <div className="space-x-3">
+      <div className="flex gap-3 justify-end">
         <span className="p-2 bg-gray-300 rounded-md font-bold hover:bg-gray-400 cursor-pointer duration-300">
           All
         </span>
