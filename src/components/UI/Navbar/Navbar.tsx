@@ -28,13 +28,17 @@ const Navbar = () => {
           className="drawer-overlay"
         ></label>
         <div className="menu border-r-2 lg:bg-white bg-base-200 bg-opacity-80 text-base-content min-h-full w-80 p-4">
-          <div className="flex flex-col gap-2 min-h-[calc(100vh-20vh)]">
+          <div className="my-2">
+            <h1 className="text-2xl font-bold text-center">Tails of Joy</h1>
+          </div>
+          <div className="flex flex-col gap-2 min-h-[calc(100vh-25vh)]">
             <Link href={"/"}>
               <h1 className="flex items-center gap-2 text-xl font-medium hover:bg-black p-2 rounded-md hover:bg-opacity-30 duration-300">
                 <FaHouse />
                 Home
               </h1>
             </Link>
+           
             {/* user */}
             <div className="dropdown dropdown-hover">
               <div
@@ -61,7 +65,7 @@ const Navbar = () => {
               </ul>
             </div>
             {/* admin */}
-            <div className="dropdown dropdown-hover">
+            {/* <div className="dropdown dropdown-hover">
               <div
                 tabIndex={0}
                 role="button"
@@ -84,7 +88,7 @@ const Navbar = () => {
                   <Link href={"/dashboard/payment"}>Payments</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <Link href={"/profile"}>
               <h1 className="flex items-center gap-2 text-xl font-medium hover:bg-black p-2 rounded-md hover:bg-opacity-30 duration-300">
                 <FaUser />
@@ -120,11 +124,6 @@ const Navbar = () => {
               </div>
             </div>
             <div>
-              {/* <Link href={"/login"}>
-                <button className="flex items-center gap-2 text-xl font-medium bg-emerald-500 hover:bg-emerald-600 p-2 rounded-md  duration-300 w-full btn">
-                  Login
-                </button>
-              </Link> */}
               <button className="flex items-center gap-2 text-xl font-medium p-2 rounded-md bg-red-500 hover:bg-red-800 text-white duration-300 w-full btn">
                 Logout
               </button>
