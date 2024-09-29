@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Roboto } from 'next/font/google'
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <body
-        className={roboto.className}
-      >
+      <body className={roboto.className}>
         {children}
+        <Toaster position="top-center" />
       </body>
     </html>
   );
