@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { FaGoogle } from "react-icons/fa6";
 
 const LoginPage = () => {
   return (
     <div className="bg-sky-200 h-screen flex justify-center items-center">
-      <div className="bg-white rounded-md h-[55vh] w-[90vw] lg:h-[45vh] lg:w-[35vw] flex justify-center shadow-lg">
+      <div className="bg-white rounded-md h-[62vh] w-[90vw] lg:h-[57vh] lg:w-[35vw] flex justify-center shadow-lg">
         <div className="max-w-xl my-10 w-full">
           <h1 className="text-5xl text-center">Login</h1>
           <form className="w-full my-5 p-5 space-y-3">
@@ -34,6 +35,11 @@ const LoginPage = () => {
             <button className="w-full btn bg-sky-500 text-white hover:bg-sky-600 duration-300">
               Login
             </button>
+            <p className="text-center font-bold">OR</p>
+            <button className="w-full bg-gray-300 btn duration-300 flex items-center">
+              <FaGoogle /> Login with Google
+            </button>
+
             <p className="text-center text-sm">
               Do not have an account?{" "}
               <Link

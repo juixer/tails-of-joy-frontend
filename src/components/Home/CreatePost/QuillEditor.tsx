@@ -9,8 +9,10 @@ const QuillEditor = () => {
   const modules = {
     toolbar: [
       ["bold", "italic", "underline"],
-      [{ size: ["small", false, "large", "huge"] }],
-      ["link", "image"],
+      [{ align: [] }],
+      [{ header: [1, 2, false] }],
+      ["link"],
+      [{ 'color': [] }],
       [{ list: "ordered" }, { list: "bullet" }],
     ],
   };
